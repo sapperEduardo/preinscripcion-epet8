@@ -1,0 +1,12 @@
+{
+  "name": "preinscripcion-epet8",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Generador de solicitudes de preinscripción de la E.P.E.T. N.º 8 — Mundo Técnico.",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test"
+  },
+  "license": "UNLICENSED"
+}

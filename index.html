@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0D1117" />
+    <title>Solicitud de preinscripción — E.P.E.T. N.º 8</title>
+    <meta
+      name="description"
+      content="Completá la solicitud de preinscripción de la E.P.E.T. N.º 8 — Mundo Técnico y descargá el documento en PDF con el formato oficial."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al formulario</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="#main" aria-label="Mundo Técnico EPET 8 — Ir al formulario">
+          <span class="brand__bar" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span class="brand__name">Mundo Técnico</span>
+            <span class="brand__sub">E.P.E.T. N.º 8</span>
+          </span>
+        </a>
+        <span class="site-header__badge">Preinscripción</span>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <section class="hero container" aria-labelledby="hero-title">
+        <p class="eyebrow">Formulario oficial</p>
+        <h1 class="hero__title" id="hero-title">
+          Solicitud de <span class="text-accent">preinscripción</span>
+        </h1>
+        <p class="hero__lead">
+          Completá los datos del/de la alumno/a y de su tutor o responsable legal. Al finalizar,
+          vas a poder descargar la solicitud en PDF con el formato oficial de la institución.
+        </p>
+        <ul class="hero__notes">
+          <li>Los campos marcados con <span class="req">*</span> son obligatorios.</li>
+          <li>
+            Las secciones del padre y de la madre son opcionales. Si las activás, todos sus campos
+            serán obligatorios.
+          </li>
+          <li>
+            Los datos se procesan únicamente en este dispositivo. No se envían ni se almacenan en
+            ningún servidor.
+          </li>
+        </ul>
+      </section>
+
+      <div class="container form-shell">
+        <div class="form-alert" id="form-alert" role="alert" hidden>
+          <p class="form-alert__title" id="form-alert-title"></p>
+          <ul class="form-alert__list" id="form-alert-list"></ul>
+        </div>
+
+        <form id="preinscription-form" novalidate>
+          <div class="accordion">
+            <!-- 01. Alumno/a -->
+            <section class="accordion__item is-open" data-section="student" data-status="pending">
+              <h2 class="accordion__heading">
+                <button
+                  class="accordion__trigger"
+                  type="button"
+                  id="student-trigger"
+                  aria-expanded="true"
+                  aria-controls="student-panel"
+                >
+                  <span class="accordion__index" aria-hidden="true">01</span>
+                  <span class="accordion__titles">
+                    <span class="accordion__title">Datos del/de la alumno/a</span>
+                    <span class="accordion__subtitle">Información personal, domicilio y contacto</span>
+                  </span>
+                  <span class="status-chip" data-status-for="student" data-status="pending">Pendiente</span>
+                  <svg class="accordion__chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <path d="M5 7.5 10 12.5 15 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </h2>
+              <div
+                class="accordion__panel"
+                id="student-panel"
+                role="region"
+                aria-labelledby="student-trigger"
+                data-accordion-panel
+              >
+                <h3 class="group-title">Datos personales</h3>
+                <div class="field-grid">
+                  <div class="field field--full">
+                    <label class="field__label" for="student-fullName">
+                      Apellido y nombres <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-fullName"
+                      name="student.fullName"
+                      data-field="student.fullName"
+                      type="text"
+                      autocomplete="name"
+                      required
+                      aria-describedby="student-fullName-error"
+                    />
+                    <p class="field__error" id="student-fullName-error" data-error-for="student.fullName" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-cuil">
+                      CUIL <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-cuil"
+                      name="student.cuil"
+                      data-field="student.cuil"
+                      type="text"
+                      inputmode="numeric"
+                      autocomplete="off"
+                      maxlength="11"
+                      required
+                      aria-describedby="student-cuil-hint student-cuil-error"
+                    />
+                    <p class="field__hint" id="student-cuil-hint">11 dígitos, sin guiones.</p>
+                    <p class="field__error" id="student-cuil-error" data-error-for="student.cuil" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-dni">
+                      DNI <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-dni"
+                      name="student.dni"
+                      data-field="student.dni"
+                      type="text"
+                      inputmode="numeric"
+                      autocomplete="off"
+                      required
+                      aria-describedby="student-dni-hint student-dni-error"
+                    />
+                    <p class="field__hint" id="student-dni-hint">Solo números, 7 dígitos o más.</p>
+                    <p class="field__error" id="student-dni-error" data-error-for="student.dni" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-birthDate">
+                      Fecha de nacimiento <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-birthDate"
+                      name="student.birthDate"
+                      data-field="student.birthDate"
+                      type="date"
+                      autocomplete="bday"
+                      required
+                      aria-describedby="student-birthDate-hint student-birthDate-error"
+                    />
+                    <p class="field__hint" id="student-birthDate-hint">La edad mínima es de 12 años.</p>
+                    <p class="field__error" id="student-birthDate-error" data-error-for="student.birthDate" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-birthPlace">
+                      Lugar de nacimiento <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-birthPlace"
+                      name="student.birthPlace"
+                      data-field="student.birthPlace"
+                      type="text"
+                      autocomplete="off"
+                      required
+                      aria-describedby="student-birthPlace-error"
+                    />
+                    <p class="field__error" id="student-birthPlace-error" data-error-for="student.birthPlace" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-nationality">
+                      Nacionalidad <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-nationality"
+                      name="student.nationality"
+                      data-field="student.nationality"
+                      type="text"
+                      autocomplete="off"
+                      required
+                      aria-describedby="student-nationality-error"
+                    />
+                    <p class="field__error" id="student-nationality-error" data-error-for="student.nationality" aria-live="polite" hidden></p>
+                  </div>
+                </div>
+
+                <h3 class="group-title">Domicilio</h3>
+                <div class="field-grid">
+                  <div class="field field--full">
+                    <label class="field__label" for="student-address">
+                      Domicilio (calle y número) <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-address"
+                      name="student.address"
+                      data-field="student.address"
+                      type="text"
+                      autocomplete="street-address"
+                      required
+                      aria-describedby="student-address-error"
+                    />
+                    <p class="field__error" id="student-address-error" data-error-for="student.address" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-locality">
+                      Localidad <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-locality"
+                      name="student.locality"
+                      data-field="student.locality"
+                      type="text"
+                      autocomplete="address-level2"
+                      required
+                      aria-describedby="student-locality-error"
+                    />
+                    <p class="field__error" id="student-locality-error" data-error-for="student.locality" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-province">
+                      Provincia <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-province"
+                      name="student.province"
+                      data-field="student.province"
+                      type="text"
+                      autocomplete="address-level1"
+                      required
+                      aria-describedby="student-province-error"
+                    />
+                    <p class="field__error" id="student-province-error" data-error-for="student.province" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-country">
+                      País <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-country"
+                      name="student.country"
+                      data-field="student.country"
+                      type="text"
+                      autocomplete="country-name"
+                      required
+                      aria-describedby="student-country-error"
+                    />
+                    <p class="field__error" id="student-country-error" data-error-for="student.country" aria-live="polite" hidden></p>
+                  </div>
+                </div>
+
+                <h3 class="group-title">Contacto</h3>
+                <div class="field-grid">
+                  <div class="field">
+                    <label class="field__label" for="student-email">
+                      Correo electrónico <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-email"
+                      name="student.email"
+                      data-field="student.email"
+                      type="email"
+                      autocomplete="email"
+                      inputmode="email"
+                      required
+                      aria-describedby="student-email-error"
+                    />
+                    <p class="field__error" id="student-email-error" data-error-for="student.email" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-phone">
+                      Teléfono móvil <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-phone"
+                      name="student.phone"
+                      data-field="student.phone"
+                      type="tel"
+                      autocomplete="tel"
+                      inputmode="tel"
+                      required
+                      aria-describedby="student-phone-hint student-phone-error"
+                    />
+                    <p class="field__hint" id="student-phone-hint">Podés usar espacios, guiones y el prefijo +.</p>
+                    <p class="field__error" id="student-phone-error" data-error-for="student.phone" aria-live="polite" hidden></p>
+                  </div>
+                </div>
+
+                <h3 class="group-title">Preinscripción</h3>
+                <div class="field-grid">
+                  <div class="field">
+                    <label class="field__label" for="student-year">
+                      Año al que solicita preinscripción <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-year"
+                      name="student.year"
+                      data-field="student.year"
+                      type="number"
+                      inputmode="numeric"
+                      step="1"
+                      required
+                      aria-describedby="student-year-hint student-year-error"
+                    />
+                    <p class="field__hint" id="student-year-hint">
+                      A partir de <span data-minimum-year>—</span>.
+                    </p>
+                    <p class="field__error" id="student-year-error" data-error-for="student.year" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="student-division">
+                      División <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="student-division"
+                      name="student.division"
+                      data-field="student.division"
+                      type="text"
+                      autocomplete="off"
+                      required
+                      aria-describedby="student-division-error"
+                    />
+                    <p class="field__error" id="student-division-error" data-error-for="student.division" aria-live="polite" hidden></p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 02. Tutor/a -->
+            <section class="accordion__item" data-section="tutor" data-status="pending">
+              <h2 class="accordion__heading">
+                <button
+                  class="accordion__trigger"
+                  type="button"
+                  id="tutor-trigger"
+                  aria-expanded="false"
+                  aria-controls="tutor-panel"
+                >
+                  <span class="accordion__index" aria-hidden="true">02</span>
+                  <span class="accordion__titles">
+                    <span class="accordion__title">Datos del tutor o responsable legal</span>
+                    <span class="accordion__subtitle">Datos de contacto y relación con el/la alumno/a</span>
+                  </span>
+                  <span class="status-chip" data-status-for="tutor" data-status="pending">Pendiente</span>
+                  <svg class="accordion__chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <path d="M5 7.5 10 12.5 15 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </h2>
+              <div
+                class="accordion__panel"
+                id="tutor-panel"
+                role="region"
+                aria-labelledby="tutor-trigger"
+                data-accordion-panel
+                hidden
+              >
+                <h3 class="group-title">Datos personales</h3>
+                <div class="field-grid">
+                  <div class="field field--full">
+                    <label class="field__label" for="tutor-fullName">
+                      Apellido y nombres <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-fullName"
+                      name="tutor.fullName"
+                      data-field="tutor.fullName"
+                      type="text"
+                      autocomplete="name"
+                      required
+                      aria-describedby="tutor-fullName-error"
+                    />
+                    <p class="field__error" id="tutor-fullName-error" data-error-for="tutor.fullName" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="tutor-dni">
+                      DNI <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-dni"
+                      name="tutor.dni"
+                      data-field="tutor.dni"
+                      type="text"
+                      inputmode="numeric"
+                      autocomplete="off"
+                      required
+                      aria-describedby="tutor-dni-hint tutor-dni-error"
+                    />
+                    <p class="field__hint" id="tutor-dni-hint">Solo números, 7 dígitos o más.</p>
+                    <p class="field__error" id="tutor-dni-error" data-error-for="tutor.dni" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field field--radios">
+                    <fieldset class="field__fieldset" data-field="tutor.inCharge" aria-describedby="tutor-inCharge-error">
+                      <legend class="field__label">
+                        A cargo <span class="req" aria-hidden="true">*</span>
+                      </legend>
+                      <div class="choice-row">
+                        <label class="choice">
+                          <input class="choice__input" type="radio" name="tutor.inCharge" value="si" required />
+                          <span class="choice__text">Sí</span>
+                        </label>
+                        <label class="choice">
+                          <input class="choice__input" type="radio" name="tutor.inCharge" value="no" />
+                          <span class="choice__text">No</span>
+                        </label>
+                      </div>
+                      <p class="field__error" id="tutor-inCharge-error" data-error-for="tutor.inCharge" aria-live="polite" hidden></p>
+                    </fieldset>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="tutor-relationship">
+                      Relación con el/la alumno/a <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-relationship"
+                      name="tutor.relationship"
+                      data-field="tutor.relationship"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Ej.: madre, padre, tutor/a"
+                      required
+                      aria-describedby="tutor-relationship-error"
+                    />
+                    <p class="field__error" id="tutor-relationship-error" data-error-for="tutor.relationship" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="tutor-maritalStatus">
+                      Estado civil <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-maritalStatus"
+                      name="tutor.maritalStatus"
+                      data-field="tutor.maritalStatus"
+                      type="text"
+                      autocomplete="off"
+                      required
+                      aria-describedby="tutor-maritalStatus-error"
+                    />
+                    <p class="field__error" id="tutor-maritalStatus-error" data-error-for="tutor.maritalStatus" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="tutor-nationality">
+                      Nacionalidad <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-nationality"
+                      name="tutor.nationality"
+                      data-field="tutor.nationality"
+                      type="text"
+                      autocomplete="off"
+                      required
+                      aria-describedby="tutor-nationality-error"
+                    />
+                    <p class="field__error" id="tutor-nationality-error" data-error-for="tutor.nationality" aria-live="polite" hidden></p>
+                  </div>
+                </div>
+
+                <h3 class="group-title">Domicilio y contacto</h3>
+                <div class="field-grid">
+                  <div class="field field--full">
+                    <label class="field__label" for="tutor-address">
+                      Domicilio (calle y número) <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-address"
+                      name="tutor.address"
+                      data-field="tutor.address"
+                      type="text"
+                      autocomplete="street-address"
+                      required
+                      aria-describedby="tutor-address-error"
+                    />
+                    <p class="field__error" id="tutor-address-error" data-error-for="tutor.address" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="tutor-locality">
+                      Localidad <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-locality"
+                      name="tutor.locality"
+                      data-field="tutor.locality"
+                      type="text"
+                      autocomplete="address-level2"
+                      required
+                      aria-describedby="tutor-locality-error"
+                    />
+                    <p class="field__error" id="tutor-locality-error" data-error-for="tutor.locality" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="tutor-phone">
+                      Teléfono <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-phone"
+                      name="tutor.phone"
+                      data-field="tutor.phone"
+                      type="tel"
+                      autocomplete="tel"
+                      inputmode="tel"
+                      required
+                      aria-describedby="tutor-phone-hint tutor-phone-error"
+                    />
+                    <p class="field__hint" id="tutor-phone-hint">Podés usar espacios, guiones y el prefijo +.</p>
+                    <p class="field__error" id="tutor-phone-error" data-error-for="tutor.phone" aria-live="polite" hidden></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="tutor-email">
+                      Correo electrónico <span class="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="tutor-email"
+                      name="tutor.email"
+                      data-field="tutor.email"
+                      type="email"
+                      autocomplete="email"
+                      inputmode="email"
+                      required
+                      aria-describedby="tutor-email-error"
+                    />
+                    <p class="field__error" id="tutor-email-error" data-error-for="tutor.email" aria-live="polite" hidden></p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 03. Padre (opcional) -->
+            <section class="accordion__item" data-section="father" data-status="optional" data-included="false">
+              <h2 class="accordion__heading">
+                <button
+                  class="accordion__trigger"
+                  type="button"
+                  id="father-trigger"
+                  aria-expanded="false"
+                  aria-controls="father-panel"
+                >
+                  <span class="accordion__index" aria-hidden="true">03</span>
+                  <span class="accordion__titles">
+                    <span class="accordion__title">Datos del padre</span>
+                    <span class="accordion__subtitle">Sección opcional</span>
+                  </span>
+                  <span class="status-chip" data-status-for="father" data-status="optional">Opcional</span>
+                  <svg class="accordion__chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <path d="M5 7.5 10 12.5 15 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </h2>
+              <div
+                class="accordion__panel"
+                id="father-panel"
+                role="region"
+                aria-labelledby="father-trigger"
+                data-accordion-panel
+                hidden
+              >
+                <div class="include-toggle">
+                  <label class="switch" for="father-include">
+                    <input
+                      class="switch__input"
+                      id="father-include"
+                      type="checkbox"
+                      data-include="father"
+                    />
+                    <span class="switch__track" aria-hidden="true">
+                      <span class="switch__thumb"></span>
+                    </span>
+                    <span class="switch__text">
+                      <span class="switch__title">Incluir los datos del padre en la solicitud</span>
+                      <span class="switch__hint">
+                        Si activás esta sección, todos sus campos serán obligatorios.
+                      </span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="section-fields" data-fields="father" hidden>
+                  <div class="field-grid">
+                    <div class="field field--full">
+                      <label class="field__label" for="father-fullName">
+                        Apellido y nombres <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="father-fullName"
+                        name="father.fullName"
+                        data-field="father.fullName"
+                        type="text"
+                        autocomplete="off"
+                        disabled
+                        aria-describedby="father-fullName-error"
+                      />
+                      <p class="field__error" id="father-fullName-error" data-error-for="father.fullName" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="field">
+                      <label class="field__label" for="father-dni">
+                        DNI <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="father-dni"
+                        name="father.dni"
+                        data-field="father.dni"
+                        type="text"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        disabled
+                        aria-describedby="father-dni-error"
+                      />
+                      <p class="field__error" id="father-dni-error" data-error-for="father.dni" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="field">
+                      <label class="field__label" for="father-phone">
+                        Teléfono <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="father-phone"
+                        name="father.phone"
+                        data-field="father.phone"
+                        type="tel"
+                        autocomplete="off"
+                        inputmode="tel"
+                        disabled
+                        aria-describedby="father-phone-error"
+                      />
+                      <p class="field__error" id="father-phone-error" data-error-for="father.phone" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="field field--radios">
+                      <fieldset class="field__fieldset" data-field="father.inCharge" aria-describedby="father-inCharge-error">
+                        <legend class="field__label">
+                          A cargo <span class="req" aria-hidden="true">*</span>
+                        </legend>
+                        <div class="choice-row">
+                          <label class="choice">
+                            <input class="choice__input" type="radio" name="father.inCharge" value="si" disabled />
+                            <span class="choice__text">Sí</span>
+                          </label>
+                          <label class="choice">
+                            <input class="choice__input" type="radio" name="father.inCharge" value="no" disabled />
+                            <span class="choice__text">No</span>
+                          </label>
+                        </div>
+                        <p class="field__error" id="father-inCharge-error" data-error-for="father.inCharge" aria-live="polite" hidden></p>
+                      </fieldset>
+                    </div>
+
+                    <div class="field">
+                      <label class="field__label" for="father-maritalStatus">
+                        Estado civil <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="father-maritalStatus"
+                        name="father.maritalStatus"
+                        data-field="father.maritalStatus"
+                        type="text"
+                        autocomplete="off"
+                        disabled
+                        aria-describedby="father-maritalStatus-error"
+                      />
+                      <p class="field__error" id="father-maritalStatus-error" data-error-for="father.maritalStatus" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="field">
+                      <label class="field__label" for="father-nationality">
+                        Nacionalidad <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="father-nationality"
+                        name="father.nationality"
+                        data-field="father.nationality"
+                        type="text"
+                        autocomplete="off"
+                        disabled
+                        aria-describedby="father-nationality-error"
+                      />
+                      <p class="field__error" id="father-nationality-error" data-error-for="father.nationality" aria-live="polite" hidden></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 04. Madre (opcional) -->
+            <section class="accordion__item" data-section="mother" data-status="optional" data-included="false">
+              <h2 class="accordion__heading">
+                <button
+                  class="accordion__trigger"
+                  type="button"
+                  id="mother-trigger"
+                  aria-expanded="false"
+                  aria-controls="mother-panel"
+                >
+                  <span class="accordion__index" aria-hidden="true">04</span>
+                  <span class="accordion__titles">
+                    <span class="accordion__title">Datos de la madre</span>
+                    <span class="accordion__subtitle">Sección opcional</span>
+                  </span>
+                  <span class="status-chip" data-status-for="mother" data-status="optional">Opcional</span>
+                  <svg class="accordion__chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <path d="M5 7.5 10 12.5 15 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </h2>
+              <div
+                class="accordion__panel"
+                id="mother-panel"
+                role="region"
+                aria-labelledby="mother-trigger"
+                data-accordion-panel
+                hidden
+              >
+                <div class="include-toggle">
+                  <label class="switch" for="mother-include">
+                    <input
+                      class="switch__input"
+                      id="mother-include"
+                      type="checkbox"
+                      data-include="mother"
+                    />
+                    <span class="switch__track" aria-hidden="true">
+                      <span class="switch__thumb"></span>
+                    </span>
+                    <span class="switch__text">
+                      <span class="switch__title">Incluir los datos de la madre en la solicitud</span>
+                      <span class="switch__hint">
+                        Si activás esta sección, todos sus campos serán obligatorios.
+                      </span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="section-fields" data-fields="mother" hidden>
+                  <div class="field-grid">
+                    <div class="field field--full">
+                      <label class="field__label" for="mother-fullName">
+                        Apellido y nombres <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="mother-fullName"
+                        name="mother.fullName"
+                        data-field="mother.fullName"
+                        type="text"
+                        autocomplete="off"
+                        disabled
+                        aria-describedby="mother-fullName-error"
+                      />
+                      <p class="field__error" id="mother-fullName-error" data-error-for="mother.fullName" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="field">
+                      <label class="field__label" for="mother-dni">
+                        DNI <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="mother-dni"
+                        name="mother.dni"
+                        data-field="mother.dni"
+                        type="text"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        disabled
+                        aria-describedby="mother-dni-error"
+                      />
+                      <p class="field__error" id="mother-dni-error" data-error-for="mother.dni" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="field">
+                      <label class="field__label" for="mother-phone">
+                        Teléfono <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="mother-phone"
+                        name="mother.phone"
+                        data-field="mother.phone"
+                        type="tel"
+                        autocomplete="off"
+                        inputmode="tel"
+                        disabled
+                        aria-describedby="mother-phone-error"
+                      />
+                      <p class="field__error" id="mother-phone-error" data-error-for="mother.phone" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="field field--radios">
+                      <fieldset class="field__fieldset" data-field="mother.inCharge" aria-describedby="mother-inCharge-error">
+                        <legend class="field__label">
+                          A cargo <span class="req" aria-hidden="true">*</span>
+                        </legend>
+                        <div class="choice-row">
+                          <label class="choice">
+                            <input class="choice__input" type="radio" name="mother.inCharge" value="si" disabled />
+                            <span class="choice__text">Sí</span>
+                          </label>
+                          <label class="choice">
+                            <input class="choice__input" type="radio" name="mother.inCharge" value="no" disabled />
+                            <span class="choice__text">No</span>
+                          </label>
+                        </div>
+                        <p class="field__error" id="mother-inCharge-error" data-error-for="mother.inCharge" aria-live="polite" hidden></p>
+                      </fieldset>
+                    </div>
+
+                    <div class="field">
+                      <label class="field__label" for="mother-maritalStatus">
+                        Estado civil <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="mother-maritalStatus"
+                        name="mother.maritalStatus"
+                        data-field="mother.maritalStatus"
+                        type="text"
+                        autocomplete="off"
+                        disabled
+                        aria-describedby="mother-maritalStatus-error"
+                      />
+                      <p class="field__error" id="mother-maritalStatus-error" data-error-for="mother.maritalStatus" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="field">
+                      <label class="field__label" for="mother-nationality">
+                        Nacionalidad <span class="req" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        class="field__input"
+                        id="mother-nationality"
+                        name="mother.nationality"
+                        data-field="mother.nationality"
+                        type="text"
+                        autocomplete="off"
+                        disabled
+                        aria-describedby="mother-nationality-error"
+                      />
+                      <p class="field__error" id="mother-nationality-error" data-error-for="mother.nationality" aria-live="polite" hidden></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="generate-card">
+            <div class="generate-card__text">
+              <h2 class="generate-card__title">Generar el documento</h2>
+              <p class="generate-card__lead">
+                Revisá los datos antes de descargar. El PDF conserva el formato oficial de la
+                institución.
+              </p>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit" id="generate-button">
+              <span class="spinner" aria-hidden="true" hidden></span>
+              <span class="btn__label">Generar y descargar PDF</span>
+              <svg class="btn__icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <path d="M10 3v9m0 0 4-4m-4 4L6 8M4 15.5h12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <p class="generation-status" id="generation-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">E.P.E.T. N.º 8</p>
+          <p class="site-footer__tag">Mundo Técnico</p>
+        </div>
+        <div class="site-footer__meta">
+          <p>Generador de solicitudes de preinscripción.</p>
+          <p class="site-footer__privacy">
+            Los datos se procesan localmente en tu navegador y no se almacenan.
+          </p>
+          <p id="institutional-link-wrap" hidden>
+            <a class="text-link" id="institutional-link">Volver al sitio institucional</a>
+          </p>
+          <p class="site-footer__copy">© <span data-current-year>2026</span> E.P.E.T. N.º 8</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

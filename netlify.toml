@@ -1,0 +1,30 @@
+# Configuración de Netlify para el generador de preinscripciones de la E.P.E.T. N.º 8.
+# El sitio es completamente estático: no requiere build ni funciones.
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "no-referrer"
+    Strict-Transport-Security = "max-age=31536000"
+    Permissions-Policy = "camera=(), geolocation=(), microphone=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+
+# El HTML se revalida siempre para que los cambios de configuración se vean.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# La plantilla es un recurso estático. La aplicación la pide con cache: no-cache,
+# por lo que el navegador revalida antes de cada generación.
+[[headers]]
+  for = "/documents/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
