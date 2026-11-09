@@ -6,6 +6,10 @@ Lista manual para validar la aplicación antes de publicarla. Ejecutar también
 ## 1. Carga y diseño
 
 - [ ] `index.html` carga sin errores en la consola.
+- [ ] El logotipo del encabezado carga, se ve nítido y no muestra un recuadro
+      visible sobre el fondo oscuro.
+- [ ] El logotipo conserva completa la forma del libro de la parte inferior,
+      sin recortes.
 - [ ] El sitio funciona servido por HTTP y HTTPS, no solo con `file://`.
 - [ ] La primera sección («Datos del alumno/a») aparece abierta.
 - [ ] Las otras tres secciones aparecen contraídas.

@@ -89,6 +89,8 @@ La lista de comprobaciones manuales está en
 │   │   ├── pdf-generator.js
 │   │   └── validation.js
 │   ├── images/
+│   │   ├── logo.jpg
+│   │   └── logo.png
 │   └── vendor/
 │       ├── pdf-lib.esm.min.js
 │       └── LICENSE.pdf-lib.md
@@ -115,12 +117,12 @@ Toda la configuración editable está en `assets/js/config.js`:
 
 ### Identidad institucional
 
-El encabezado usa la identidad textual «Mundo Técnico / E.P.E.T. N.º 8».
-Cuando se disponga del archivo original del logotipo, debe incorporarse en
-`assets/images/` y reemplazar el bloque de texto del encabezado. No se debe
-recrear ni inventar el logotipo. La captura de la web institucional fue solo
-una referencia visual y no forma parte del repositorio ni se usa en tiempo de
-ejecución.
+El encabezado usa `assets/images/logo.png`, una versión transparente de
+256 × 256 px derivada del logotipo institucional. El archivo original provisto
+se conserva en `assets/images/logo.jpg` como fuente. Para reemplazar el logo,
+actualizá `logo.png` o la ruta en `index.html`. El enlace del encabezado
+mantiene el nombre accesible «Mundo Técnico EPET 8 — Ir al formulario». No se
+debe recrear ni inventar el logotipo.
 
 ### Enlace institucional
 
@@ -194,7 +196,8 @@ requieren variables de entorno ni funciones.
 - [x] Mapeo de campos verificado contra la plantilla real.
 - [x] Pruebas de validación y de PDF.
 - [ ] Definir `INSTITUTIONAL_URL`.
-- [ ] Incorporar el archivo original del logotipo institucional.
+- [x] Incorporar el logotipo institucional en el encabezado
+      (`assets/images/logo.png`, con fondo transparente).
 - [x] Eliminar la copia duplicada de la plantilla en la raíz del proyecto. La
       única copia es la de `documents/`.
 
